@@ -55,9 +55,17 @@ body {
 .intro-orange {
   background: linear-gradient($introPrimary, $introSecondary);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 400%;
   border-bottom-left-radius: 10rem;
 
   .img-bg {
+    background-image: url(/images/bg-pattern-intro.svg);
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-position: 35% 30%;
+    border-radius: inherit;
+
     .intro-imgs {
       display: flex;
       align-items: center;
@@ -149,6 +157,14 @@ body {
       padding: 2rem 2rem 10rem 2rem;
       opacity: 0.7;
       text-align: center;
+    }
+
+    div {
+      background-image: url(/images/bg-pattern-circles.svg);
+      background-position: 50% -20rem;
+      background-repeat: no-repeat;
+      background-size: 150%;
+      border-radius: inherit;
     }
   }
 }

@@ -40,7 +40,17 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background: linear-gradient(#ff8f70, #ff3d54);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 400%;
   border-bottom-left-radius: 10rem;
+}
+
+.intro-orange .img-bg {
+  background-image: url(/images/bg-pattern-intro.svg);
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: 35% 30%;
+  border-radius: inherit;
 }
 
 .intro-orange .img-bg .intro-imgs {
@@ -143,6 +153,14 @@ body {
   padding: 2rem 2rem 10rem 2rem;
   opacity: 0.7;
   text-align: center;
+}
+
+#card-3 .inner-card div {
+  background-image: url(/images/bg-pattern-circles.svg);
+  background-position: 50% -20rem;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  border-radius: inherit;
 }
 
 #card-4 {
