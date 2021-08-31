@@ -173,3 +173,27 @@ body {
     }
   }
 }
+
+footer {
+  background: $footerBg;
+  border-top-right-radius: 10rem;
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 6.5rem;
+  text-align: center;
+
+  img {
+    margin-bottom: 7rem;
+  }
+
+  div {
+    padding-bottom: 5rem;
+    h4 {
+      margin-bottom: 3rem;
+    }
+
+    ul li {
+      padding-bottom: 1.5rem;
+      opacity: 0.7;
+    }
+  }
+}
