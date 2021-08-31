@@ -46,7 +46,7 @@ body {
 }
 
 .intro-orange .img-bg {
-  background-image: url(/images/bg-pattern-intro.svg);
+  background-image: url(../images/bg-pattern-intro.svg);
   background-repeat: no-repeat;
   background-size: 300%;
   background-position: 35% 30%;
@@ -156,7 +156,7 @@ body {
 }
 
 #card-3 .inner-card div {
-  background-image: url(/images/bg-pattern-circles.svg);
+  background-image: url(../images/bg-pattern-circles.svg);
   background-position: 50% -20rem;
   background-repeat: no-repeat;
   background-size: 150%;
