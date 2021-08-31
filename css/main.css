@@ -93,6 +93,7 @@ body {
 }
 
 .intro-orange .img-bg .info-btns #white-btn {
+  background-color: white;
   color: #ff525d;
 }
 
