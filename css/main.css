@@ -189,5 +189,11 @@ footer div h4 {
 footer div ul li {
   padding-bottom: 1.5rem;
   opacity: 0.7;
+  text-decoration: none;
+}
+
+footer div ul li a {
+  color: #c8c8cb;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
