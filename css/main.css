@@ -114,4 +114,55 @@ body {
 #card-2 div .gray-text {
   padding: 0 3.5rem;
 }
+
+#card-3 {
+  padding-top: 15rem;
+  position: relative;
+}
+
+#card-3 .inner-card {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+  background: linear-gradient(#2c2d3f, #3f4164);
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+}
+
+#card-3 .inner-card img {
+  position: absolute;
+  width: 100%;
+  top: -2rem;
+}
+
+#card-3 .inner-card h2 {
+  padding-top: 25rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+#card-3 .inner-card p {
+  padding: 2rem 2rem 10rem 2rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+#card-4 {
+  padding-top: 7rem;
+}
+
+#card-4 img {
+  max-width: 100%;
+  padding-bottom: 2.5rem;
+}
+
+#card-4 div {
+  padding: 0 3rem;
+}
+
+#card-4 div h2 {
+  margin-bottom: 2.5rem;
+}
+
+#card-4 div p {
+  margin-bottom: 4rem;
+}
 /*# sourceMappingURL=main.css.map */
