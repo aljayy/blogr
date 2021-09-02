@@ -72,7 +72,6 @@ $bodySecondary: hsl(237, 23%, 32%);
       background-color: #efeff1;
       border-radius: 0.5rem;
       margin-top: 2.5rem;
-      display: none;
 
       ul {
         :last-child {
@@ -88,11 +87,6 @@ $bodySecondary: hsl(237, 23%, 32%);
         }
       }
     }
-
-    // :nth-child(6) {
-    //   border-bottom: 1px solid #ccc;
-    //   margin-bottom: 2rem;
-    // }
   }
 
   .border {
@@ -135,6 +129,7 @@ $bodySecondary: hsl(237, 23%, 32%);
 .display {
   display: none;
 }
+
 // Regular Styling
 body {
   background-color: $white;
