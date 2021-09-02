@@ -44,6 +44,97 @@ $bodySecondary: hsl(237, 23%, 32%);
   font-weight: 700;
   padding: 1.5rem;
 }
+
+// Mobile Menu Styling
+#mobile-menu {
+  background-color: $white;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  position: absolute;
+  width: 90%;
+  padding: 0 2.5rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .menu-title {
+    .anchor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding-top: 3.5rem;
+    }
+    .links-hidden {
+      background-color: #efeff1;
+      border-radius: 0.5rem;
+      margin-top: 2.5rem;
+      display: none;
+
+      ul {
+        :last-child {
+          padding-bottom: 2.5rem;
+        }
+        li {
+          padding-top: 2.5rem;
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: $darkGrayBlueBody;
+          }
+        }
+      }
+    }
+
+    // :nth-child(6) {
+    //   border-bottom: 1px solid #ccc;
+    //   margin-bottom: 2rem;
+    // }
+  }
+
+  .border {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .mobile-btns {
+    display: flex;
+    flex-direction: column;
+    // font-family: "Ubuntu", sans-serif;
+    align-items: center;
+    margin-top: 3.75rem;
+    padding-bottom: 3rem;
+
+    button {
+      border-radius: 3rem;
+      font-size: 2rem;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 700;
+      padding: 1.5rem 4rem;
+    }
+
+    #login {
+      background-color: $white;
+      border: none;
+      color: $headingPrimary;
+      margin-bottom: 2rem;
+    }
+
+    #signup {
+      background: linear-gradient($introPrimary, $introSecondary);
+      border: none;
+      color: $white;
+    }
+  }
+}
+
+// JavaScript classes
+.display {
+  display: none;
+}
 // Regular Styling
 body {
   background-color: $white;

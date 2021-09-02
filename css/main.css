@@ -29,6 +29,104 @@
   padding: 1.5rem;
 }
 
+#mobile-menu {
+  background-color: white;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  position: absolute;
+  width: 90%;
+  padding: 0 2.5rem;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#mobile-menu .menu-title .anchor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  padding-top: 3.5rem;
+}
+
+#mobile-menu .menu-title .links-hidden {
+  background-color: #efeff1;
+  border-radius: 0.5rem;
+  margin-top: 2.5rem;
+  display: none;
+}
+
+#mobile-menu .menu-title .links-hidden ul :last-child {
+  padding-bottom: 2.5rem;
+}
+
+#mobile-menu .menu-title .links-hidden ul li {
+  padding-top: 2.5rem;
+  list-style: none;
+}
+
+#mobile-menu .menu-title .links-hidden ul li a {
+  text-decoration: none;
+  color: #4b5862;
+}
+
+#mobile-menu .border {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+#mobile-menu .mobile-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3.75rem;
+  padding-bottom: 3rem;
+}
+
+#mobile-menu .mobile-btns button {
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  padding: 1.5rem 4rem;
+}
+
+#mobile-menu .mobile-btns #login {
+  background-color: white;
+  border: none;
+  color: #1f3f5b;
+  margin-bottom: 2rem;
+}
+
+#mobile-menu .mobile-btns #signup {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(#ff8f70, #ff3d54);
+  border: none;
+  color: white;
+}
+
+.display {
+  display: none;
+}
+
 body {
   background-color: white;
   color: white;
