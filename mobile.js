@@ -1,16 +1,16 @@
 `use strict`;
+
 const hamburger = document.querySelector(`#ham-menu`);
-const menu = document.querySelector(`#mobile-menu`);
-const title = document.querySelectorAll(`.title`);
-const links = document.querySelectorAll(`.links-hidden`);
+const overlay = document.querySelector(`.overlay`);
+const anchor = document.querySelectorAll(".anchor");
+const link = document.querySelectorAll(`.links`);
 
 hamburger.addEventListener(`click`, function () {
-  menu.classList.toggle(`display`);
-  console.log(`Hello`);
-});
+  overlay.classList.toggle(`display`);
 
-for (let i = 0; i < title.length; i++) {
-  title[i].addEventListener(`click`, function () {
-    links[i].classList.toggle(`display`);
-  });
-}
+  for (let i = 0; i < anchor.length; i++) {
+    anchor[i].addEventListener("click", function () {
+      link[i].classList.toggle("display");
+    });
+  }
+});

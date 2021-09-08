@@ -46,40 +46,51 @@ $bodySecondary: hsl(237, 23%, 32%);
 }
 
 // Mobile Menu Styling
-#mobile-menu {
-  background-color: $white;
-  border-radius: 0.5rem;
-  border-bottom: 1px solid #ccc;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
-  font-family: "Ubuntu", sans-serif;
-  text-align: center;
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: transparent;
   position: absolute;
-  width: 90%;
-  padding: 0 2.5rem;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
 
-  .menu-title {
+  #mobile-menu {
+    background-color: $white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    font-family: "Ubuntu", sans-serif;
+    margin: 12.5rem auto 0 auto;
+    max-width: 90%;
+
+    .overview {
+      padding-top: 3rem;
+      margin: 0 3rem;
+    }
+
+    .border {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
     .anchor {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       gap: 1rem;
-      padding-top: 3.5rem;
     }
-    .links-hidden {
+
+    .links {
       background-color: #efeff1;
       border-radius: 0.5rem;
-      margin-top: 2.5rem;
+      margin: 2.5rem;
+      padding-bottom: 2.5rem;
 
       ul {
-        :last-child {
-          padding-bottom: 2.5rem;
-        }
         li {
           padding-top: 2.5rem;
           list-style: none;
+          text-align: center;
           a {
             text-decoration: none;
             color: $darkGrayBlueBody;
@@ -87,40 +98,34 @@ $bodySecondary: hsl(237, 23%, 32%);
         }
       }
     }
-  }
 
-  .border {
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #ccc;
-  }
+    .mobile-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-bottom: 3rem;
 
-  .mobile-btns {
-    display: flex;
-    flex-direction: column;
-    // font-family: "Ubuntu", sans-serif;
-    align-items: center;
-    margin-top: 3.75rem;
-    padding-bottom: 3rem;
+      button {
+        border-radius: 3rem;
+        font-size: 2rem;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        padding: 1.5rem 4rem;
+      }
 
-    button {
-      border-radius: 3rem;
-      font-size: 2rem;
-      font-family: "Ubuntu", sans-serif;
-      font-weight: 700;
-      padding: 1.5rem 4rem;
-    }
+      #login {
+        background-color: $white;
+        border: none;
+        color: $headingPrimary;
+        margin-bottom: 2rem;
+      }
 
-    #login {
-      background-color: $white;
-      border: none;
-      color: $headingPrimary;
-      margin-bottom: 2rem;
-    }
-
-    #signup {
-      background: linear-gradient($introPrimary, $introSecondary);
-      border: none;
-      color: $white;
+      #signup {
+        background: linear-gradient($introPrimary, $introSecondary);
+        border: none;
+        color: $white;
+      }
     }
   }
 }
@@ -157,6 +162,10 @@ body {
       align-items: center;
       justify-content: space-between;
       padding: 5rem 2rem 0rem 2rem;
+
+      #ham-menu {
+        z-index: 50;
+      }
     }
 
     h2 {
