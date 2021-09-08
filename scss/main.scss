@@ -25,6 +25,19 @@ $bodySecondary: hsl(237, 23%, 32%);
   box-sizing: border-box;
 }
 
+// JavaScript classes
+.display {
+  display: none;
+}
+
+.transparency {
+  opacity: 0.8;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 // Resuable classes
 .blue-heading {
   color: $headingPrimary;
@@ -128,11 +141,6 @@ $bodySecondary: hsl(237, 23%, 32%);
       }
     }
   }
-}
-
-// JavaScript classes
-.display {
-  display: none;
 }
 
 // Regular Styling

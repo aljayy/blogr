@@ -10,6 +10,21 @@
           box-sizing: border-box;
 }
 
+.display {
+  display: none;
+}
+
+.transparency {
+  opacity: 0.8;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
 .blue-heading {
   color: #1f3f5b;
   text-align: center;
@@ -125,10 +140,6 @@
   background: linear-gradient(#ff8f70, #ff3d54);
   border: none;
   color: white;
-}
-
-.display {
-  display: none;
 }
 
 body {

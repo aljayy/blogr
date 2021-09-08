@@ -4,6 +4,8 @@ const hamburger = document.querySelector(`#ham-menu`);
 const overlay = document.querySelector(`.overlay`);
 const anchor = document.querySelectorAll(".anchor");
 const link = document.querySelectorAll(`.links`);
+const heading = document.querySelectorAll(".blue-heading");
+const arrow = document.querySelectorAll(".arrow");
 
 hamburger.addEventListener(`click`, function () {
   overlay.classList.toggle(`display`);
@@ -11,6 +13,9 @@ hamburger.addEventListener(`click`, function () {
   for (let i = 0; i < anchor.length; i++) {
     anchor[i].addEventListener("click", function () {
       link[i].classList.toggle("display");
+      heading[i].classList.toggle("transparency");
+      arrow[i].classList.toggle("rotate");
+      arrow[i].style.transition = "300ms";
     });
   }
 });
