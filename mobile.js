@@ -28,3 +28,13 @@ x.addEventListener("click", function () {
   hamburger.classList.remove("display");
   overlay.classList.add("display");
 });
+
+function preventBubbling(event) {
+  event.stopPropagation();
+}
+
+overlay.addEventListener("click", function () {
+  overlay.classList.add("display");
+  x.classList.add("display");
+  hamburger.classList.remove("display");
+});
