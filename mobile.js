@@ -1,14 +1,17 @@
 `use strict`;
 
-const hamburger = document.querySelector(`#ham-menu`);
+const hamburger = document.querySelector(`.ham-menu`);
 const overlay = document.querySelector(`.overlay`);
 const anchor = document.querySelectorAll(".anchor");
 const link = document.querySelectorAll(`.links`);
 const heading = document.querySelectorAll(".blue-heading");
 const arrow = document.querySelectorAll(".arrow");
+const x = document.querySelector(".close");
 
 hamburger.addEventListener(`click`, function () {
-  overlay.classList.toggle(`display`);
+  hamburger.classList.add("display");
+  x.classList.remove("display");
+  overlay.classList.remove(`display`);
 
   for (let i = 0; i < anchor.length; i++) {
     anchor[i].addEventListener("click", function () {
@@ -18,4 +21,10 @@ hamburger.addEventListener(`click`, function () {
       arrow[i].style.transition = "300ms";
     });
   }
+});
+
+x.addEventListener("click", function () {
+  x.classList.add("display");
+  hamburger.classList.remove("display");
+  overlay.classList.add("display");
 });

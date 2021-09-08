@@ -171,8 +171,12 @@ body {
       justify-content: space-between;
       padding: 5rem 2rem 0rem 2rem;
 
-      #ham-menu {
-        z-index: 50;
+      .ham-menu {
+        z-index: 60;
+      }
+
+      .close {
+        z-index: 60;
       }
     }
 

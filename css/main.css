@@ -21,8 +21,6 @@
 .rotate {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-transition: 300ms;
-  transition: 300ms;
 }
 
 .blue-heading {
@@ -179,8 +177,12 @@ body {
   padding: 5rem 2rem 0rem 2rem;
 }
 
-.intro-orange .img-bg .intro-imgs #ham-menu {
-  z-index: 50;
+.intro-orange .img-bg .intro-imgs .ham-menu {
+  z-index: 60;
+}
+
+.intro-orange .img-bg .intro-imgs .close {
+  z-index: 60;
 }
 
 .intro-orange .img-bg h2 {
