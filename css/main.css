@@ -432,7 +432,13 @@ footer div ul li a {
   #desktop-menu .menu-left #desktop-links .dk-links li a:hover {
     font-weight: bold;
   }
+  #desktop-menu .dk-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   #desktop-menu .dk-btns {
+    display: block;
     border-radius: 3rem;
     border: none;
     font-size: 1.5rem;
@@ -537,6 +543,22 @@ footer div ul li a {
   }
   #card-4 div :nth-child(2) {
     margin-bottom: 7rem;
+  }
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  footer div h4 {
+    text-align: left;
+  }
+  footer div ul li {
+    list-style: none;
+    text-align: left;
+  }
+  footer div ul li a {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=main.css.map */

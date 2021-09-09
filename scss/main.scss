@@ -422,7 +422,11 @@ footer {
       }
     }
 
+    .dk-btn {
+      display: flex;
+    }
     .dk-btns {
+      display: block;
       border-radius: 3rem;
       border: none;
       font-size: 1.5rem;
@@ -534,6 +538,25 @@ footer {
 
       :nth-child(2) {
         margin-bottom: 7rem;
+      }
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    div {
+      h4 {
+        text-align: left;
+      }
+      ul li {
+        list-style: none;
+        text-align: left;
+
+        a {
+          text-align: left;
+        }
       }
     }
   }
