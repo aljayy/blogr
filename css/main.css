@@ -44,7 +44,8 @@
 
 #desktop-links,
 #dk-logo,
-.dk-btn {
+.dk-btn,
+.ild {
   display: none;
 }
 
@@ -351,7 +352,8 @@ footer div ul li a {
   .logo,
   .ham-menu,
   .close,
-  .iem-mobile {
+  .iem-mobile,
+  .ilm {
     display: none;
   }
   #desktop-menu {
@@ -512,6 +514,29 @@ footer div ul li a {
     top: -10rem;
     left: 0;
     width: 50%;
+  }
+  #card-4 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding-top: 30rem;
+  }
+  #card-4 .ild {
+    width: 200%;
+    display: block;
+  }
+  #card-4 .ild img {
+    position: relative;
+    top: -25%;
+    left: -23%;
+  }
+  #card-4 div h2,
+  #card-4 div p {
+    text-align: left;
+  }
+  #card-4 div :nth-child(2) {
+    margin-bottom: 7rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

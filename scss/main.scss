@@ -61,7 +61,8 @@ $bodySecondary: hsl(237, 23%, 32%);
 // Mobile Menu Styling
 #desktop-links,
 #dk-logo,
-.dk-btn {
+.dk-btn,
+.ild {
   display: none;
 }
 .overlay {
@@ -343,7 +344,8 @@ footer {
   .logo,
   .ham-menu,
   .close,
-  .iem-mobile {
+  .iem-mobile,
+  .ilm {
     display: none;
   }
 
@@ -504,6 +506,34 @@ footer {
         top: -10rem;
         left: 0;
         width: 50%;
+      }
+    }
+  }
+
+  #card-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 30rem;
+
+    .ild {
+      width: 200%;
+      display: block;
+
+      img {
+        position: relative;
+        top: -25%;
+        left: -23%;
+      }
+    }
+
+    div {
+      h2,
+      p {
+        text-align: left;
+      }
+
+      :nth-child(2) {
+        margin-bottom: 7rem;
       }
     }
   }
