@@ -349,6 +349,21 @@ footer {
     display: none;
   }
 
+  // .img-bg {
+  //   background-image: url(../images/bg-pattern-intro.svg);
+  //   background-repeat: no-repeat;
+  //   background-size: 300%;
+  //   background-position: 35% 30%;
+  //   border-radius: inherit;
+
+  .intro-orange {
+    background-image: linear-gradient($introPrimary, $introSecondary);
+    .img-bg {
+      background-size: 220%;
+      background-position: 30% 50%;
+    }
+  }
+
   #desktop-menu {
     display: flex;
     font-family: "Ubuntu", sans-serif;

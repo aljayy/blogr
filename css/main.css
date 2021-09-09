@@ -356,6 +356,14 @@ footer div ul li a {
   .ilm {
     display: none;
   }
+  .intro-orange {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+    background-image: linear-gradient(#ff8f70, #ff3d54);
+  }
+  .intro-orange .img-bg {
+    background-size: 220%;
+    background-position: 30% 50%;
+  }
   #desktop-menu {
     display: -webkit-box;
     display: -ms-flexbox;
