@@ -59,6 +59,11 @@ $bodySecondary: hsl(237, 23%, 32%);
 }
 
 // Mobile Menu Styling
+#desktop-links,
+#dk-logo,
+.dk-btn {
+  display: none;
+}
 .overlay {
   width: 100vw;
   height: 100vh;
@@ -127,14 +132,14 @@ $bodySecondary: hsl(237, 23%, 32%);
         padding: 1.5rem 4rem;
       }
 
-      #login {
+      .login {
         background-color: $white;
         border: none;
         color: $headingPrimary;
         margin-bottom: 2rem;
       }
 
-      #signup {
+      .signup {
         background: linear-gradient($introPrimary, $introSecondary);
         border: none;
         color: $white;
@@ -223,11 +228,15 @@ body {
     font-size: 2.6rem;
   }
 
-  div {
-    img {
-      max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 
+  .iem-desktop {
+    display: none;
+  }
+
+  div {
     .blue-heading {
       line-height: 3rem;
       margin-top: 3.5rem;
@@ -267,7 +276,7 @@ body {
       text-align: center;
     }
 
-    div {
+    .dk-flex-1 {
       background-image: url(../images/bg-pattern-circles.svg);
       background-position: 50% -20rem;
       background-repeat: no-repeat;
@@ -323,6 +332,178 @@ footer {
       a {
         color: $grayBlueFooter;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .overlay,
+  .mobile-menu,
+  .logo,
+  .ham-menu,
+  .close,
+  .iem-mobile {
+    display: none;
+  }
+
+  #desktop-menu {
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+    justify-content: space-between;
+    max-width: 111.5rem;
+    margin: auto;
+
+    .menu-left {
+      display: flex;
+      gap: 6rem;
+
+      #dk-logo {
+        display: block;
+        height: 4rem;
+      }
+
+      #desktop-links {
+        display: flex;
+        gap: 3rem;
+        padding-top: 1.5rem;
+
+        div {
+          position: relative;
+        }
+
+        .dk-anchor {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+
+          &:hover {
+            color: $white;
+          }
+
+          p {
+            padding: 0;
+
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+              text-decoration-thickness: 0.3rem;
+              text-underline-offset: 0.5rem;
+            }
+          }
+        }
+
+        .dk-links {
+          background-color: $white;
+          border-radius: 0.5rem;
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+          margin-top: 2.5rem;
+          padding: 3rem 5rem 0 1.8rem;
+
+          position: absolute;
+          left: -1.5rem;
+
+          li {
+            list-style: none;
+            padding-bottom: 1.5rem;
+            a {
+              color: black;
+              text-decoration: none;
+
+              &:hover {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dk-btns {
+      border-radius: 3rem;
+      border: none;
+      font-size: 1.5rem;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 700;
+      padding: 1.5rem 4rem;
+      cursor: pointer;
+    }
+    .dk-login {
+      background-color: transparent;
+
+      color: $white;
+    }
+
+    .dk-signup {
+      color: $textPrimary;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+
+  #card-2 {
+    h2 {
+      font-size: 4rem;
+    }
+    #mobile-flex-1 {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-left: 16rem;
+
+      .iem-desktop {
+        display: block;
+        flex-basis: 1;
+        max-width: 50%;
+        position: relative;
+        top: -15rem;
+        left: 15%;
+      }
+
+      .blue-heading,
+      .gray-text {
+        padding: 0;
+        text-align: left;
+      }
+
+      .blue-heading {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
+  #card-3 {
+    padding-top: 0;
+    .inner-card {
+      .dk-flex-1 {
+        display: flex;
+        flex-direction: row-reverse;
+        background-size: 80%;
+        background-position: -30rem 80%;
+      }
+
+      .dk-flex-2 {
+        width: 50%;
+        padding: 11rem 0 9rem 0;
+
+        h2 {
+          padding: 0;
+          text-align: left;
+        }
+
+        p {
+          padding-left: 0;
+          text-align: left;
+        }
+      }
+
+      img {
+        top: -10rem;
+        left: 0;
+        width: 50%;
       }
     }
   }
