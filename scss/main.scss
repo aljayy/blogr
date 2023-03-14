@@ -25,6 +25,19 @@ $bodySecondary: hsl(237, 23%, 32%);
   box-sizing: border-box;
 }
 
+// JavaScript classes
+.display {
+  display: none;
+}
+
+.transparency {
+  opacity: 0.8;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 // Resuable classes
 .blue-heading {
   color: $headingPrimary;
@@ -44,6 +57,98 @@ $bodySecondary: hsl(237, 23%, 32%);
   font-weight: 700;
   padding: 1.5rem;
 }
+
+// Mobile Menu Styling
+#desktop-links,
+#dk-logo,
+.dk-btn,
+.ild {
+  display: none;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  #mobile-menu {
+    background-color: $white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    font-family: "Ubuntu", sans-serif;
+    margin: 12.5rem auto 0 auto;
+    max-width: 90%;
+
+    .overview {
+      padding-top: 3rem;
+      margin: 0 3rem;
+    }
+
+    .border {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .anchor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .links {
+      background-color: #efeff1;
+      border-radius: 0.5rem;
+      margin: 2.5rem;
+      padding-bottom: 2.5rem;
+
+      ul {
+        li {
+          padding-top: 2.5rem;
+          list-style: none;
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: $darkGrayBlueBody;
+          }
+        }
+      }
+    }
+
+    .mobile-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.5rem;
+      padding-bottom: 3rem;
+
+      button {
+        border-radius: 3rem;
+        font-size: 2rem;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        padding: 1.5rem 4rem;
+      }
+
+      .login {
+        background-color: $white;
+        border: none;
+        color: $headingPrimary;
+        margin-bottom: 2rem;
+      }
+
+      .signup {
+        background: linear-gradient($introPrimary, $introSecondary);
+        border: none;
+        color: $white;
+      }
+    }
+  }
+}
+
 // Regular Styling
 body {
   background-color: $white;
@@ -71,6 +176,14 @@ body {
       align-items: center;
       justify-content: space-between;
       padding: 5rem 2rem 0rem 2rem;
+
+      .ham-menu {
+        z-index: 60;
+      }
+
+      .close {
+        z-index: 60;
+      }
     }
 
     h2 {
@@ -116,11 +229,15 @@ body {
     font-size: 2.6rem;
   }
 
-  div {
-    img {
-      max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 
+  .iem-desktop {
+    display: none;
+  }
+
+  div {
     .blue-heading {
       line-height: 3rem;
       margin-top: 3.5rem;
@@ -160,7 +277,7 @@ body {
       text-align: center;
     }
 
-    div {
+    .dk-flex-1 {
       background-image: url(../images/bg-pattern-circles.svg);
       background-position: 50% -20rem;
       background-repeat: no-repeat;
@@ -216,6 +333,245 @@ footer {
       a {
         color: $grayBlueFooter;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .overlay,
+  .mobile-menu,
+  .logo,
+  .ham-menu,
+  .close,
+  .iem-mobile,
+  .ilm {
+    display: none;
+  }
+
+  // .img-bg {
+  //   background-image: url(../images/bg-pattern-intro.svg);
+  //   background-repeat: no-repeat;
+  //   background-size: 300%;
+  //   background-position: 35% 30%;
+  //   border-radius: inherit;
+
+  .intro-orange {
+    background-image: linear-gradient($introPrimary, $introSecondary);
+    .img-bg {
+      background-size: 220%;
+      background-position: 30% 50%;
+    }
+  }
+
+  #desktop-menu {
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+    justify-content: space-between;
+    max-width: 111.5rem;
+    margin: auto;
+
+    .menu-left {
+      display: flex;
+      gap: 6rem;
+
+      #dk-logo {
+        display: block;
+        height: 4rem;
+      }
+
+      #desktop-links {
+        display: flex;
+        gap: 3rem;
+        padding-top: 1.5rem;
+
+        div {
+          position: relative;
+        }
+
+        .dk-anchor {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+
+          &:hover {
+            color: $white;
+          }
+
+          p {
+            padding: 0;
+
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+              text-decoration-thickness: 0.3rem;
+              text-underline-offset: 0.5rem;
+            }
+          }
+        }
+
+        .dk-links {
+          background-color: $white;
+          border-radius: 0.5rem;
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+          margin-top: 2.5rem;
+          padding: 3rem 5rem 0 1.8rem;
+
+          position: absolute;
+          left: -1.5rem;
+
+          li {
+            list-style: none;
+            padding-bottom: 1.5rem;
+            a {
+              color: black;
+              text-decoration: none;
+
+              &:hover {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .dk-btn {
+      display: flex;
+    }
+    .dk-btns {
+      display: block;
+      border-radius: 3rem;
+      border: none;
+      font-size: 1.5rem;
+      font-family: "Ubuntu", sans-serif;
+      font-weight: 700;
+      padding: 1.5rem 4rem;
+      cursor: pointer;
+    }
+    .dk-login {
+      background-color: transparent;
+
+      color: $white;
+    }
+
+    .dk-signup {
+      color: $textPrimary;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+
+  #card-2 {
+    h2 {
+      font-size: 4rem;
+    }
+    #mobile-flex-1 {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-left: 16rem;
+
+      .iem-desktop {
+        display: block;
+        flex-basis: 1;
+        max-width: 50%;
+        position: relative;
+        top: -15rem;
+        left: 15%;
+      }
+
+      .blue-heading,
+      .gray-text {
+        padding: 0;
+        text-align: left;
+      }
+
+      .blue-heading {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
+  #card-3 {
+    padding-top: 0;
+    .inner-card {
+      .dk-flex-1 {
+        display: flex;
+        flex-direction: row-reverse;
+        background-size: 80%;
+        background-position: -30rem 80%;
+      }
+
+      .dk-flex-2 {
+        width: 50%;
+        padding: 11rem 0 9rem 0;
+
+        h2 {
+          padding: 0;
+          text-align: left;
+        }
+
+        p {
+          padding-left: 0;
+          text-align: left;
+        }
+      }
+
+      img {
+        top: -10rem;
+        left: 0;
+        width: 50%;
+      }
+    }
+  }
+
+  #card-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 30rem;
+
+    .ild {
+      width: 200%;
+      display: block;
+
+      img {
+        position: relative;
+        top: -25%;
+        left: -23%;
+      }
+    }
+
+    div {
+      h2,
+      p {
+        text-align: left;
+      }
+
+      :nth-child(2) {
+        margin-bottom: 7rem;
+      }
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    div {
+      h4 {
+        text-align: left;
+      }
+      ul li {
+        list-style: none;
+        text-align: left;
+
+        a {
+          text-align: left;
+        }
       }
     }
   }

@@ -10,6 +10,19 @@
           box-sizing: border-box;
 }
 
+.display {
+  display: none;
+}
+
+.transparency {
+  opacity: 0.8;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .blue-heading {
   color: #1f3f5b;
   text-align: center;
@@ -27,6 +40,111 @@
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   padding: 1.5rem;
+}
+
+#desktop-links,
+#dk-logo,
+.dk-btn,
+.ild {
+  display: none;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay #mobile-menu {
+  background-color: white;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  font-family: "Ubuntu", sans-serif;
+  margin: 12.5rem auto 0 auto;
+  max-width: 90%;
+}
+
+.overlay #mobile-menu .overview {
+  padding-top: 3rem;
+  margin: 0 3rem;
+}
+
+.overlay #mobile-menu .border {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.overlay #mobile-menu .anchor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.overlay #mobile-menu .links {
+  background-color: #efeff1;
+  border-radius: 0.5rem;
+  margin: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.overlay #mobile-menu .links ul li {
+  padding-top: 2.5rem;
+  list-style: none;
+  text-align: center;
+}
+
+.overlay #mobile-menu .links ul li a {
+  text-decoration: none;
+  color: #4b5862;
+}
+
+.overlay #mobile-menu .mobile-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.overlay #mobile-menu .mobile-btns button {
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  padding: 1.5rem 4rem;
+}
+
+.overlay #mobile-menu .mobile-btns .login {
+  background-color: white;
+  border: none;
+  color: #1f3f5b;
+  margin-bottom: 2rem;
+}
+
+.overlay #mobile-menu .mobile-btns .signup {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(#ff8f70, #ff3d54);
+  border: none;
+  color: white;
 }
 
 body {
@@ -64,6 +182,14 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5rem 2rem 0rem 2rem;
+}
+
+.intro-orange .img-bg .intro-imgs .ham-menu {
+  z-index: 60;
+}
+
+.intro-orange .img-bg .intro-imgs .close {
+  z-index: 60;
 }
 
 .intro-orange .img-bg h2 {
@@ -112,8 +238,12 @@ body {
   font-size: 2.6rem;
 }
 
-#card-2 div img {
+#card-2 img {
   max-width: 100%;
+}
+
+#card-2 .iem-desktop {
+  display: none;
 }
 
 #card-2 div .blue-heading {
@@ -156,7 +286,7 @@ body {
   text-align: center;
 }
 
-#card-3 .inner-card div {
+#card-3 .inner-card .dk-flex-1 {
   background-image: url(../images/bg-pattern-circles.svg);
   background-position: 50% -20rem;
   background-repeat: no-repeat;
@@ -214,5 +344,229 @@ footer div ul li {
 footer div ul li a {
   color: #c8c8cb;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .overlay,
+  .mobile-menu,
+  .logo,
+  .ham-menu,
+  .close,
+  .iem-mobile,
+  .ilm {
+    display: none;
+  }
+  .intro-orange {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
+    background-image: linear-gradient(#ff8f70, #ff3d54);
+  }
+  .intro-orange .img-bg {
+    background-size: 220%;
+    background-position: 30% 50%;
+  }
+  #desktop-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 111.5rem;
+    margin: auto;
+  }
+  #desktop-menu .menu-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 6rem;
+  }
+  #desktop-menu .menu-left #dk-logo {
+    display: block;
+    height: 4rem;
+  }
+  #desktop-menu .menu-left #desktop-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+    padding-top: 1.5rem;
+  }
+  #desktop-menu .menu-left #desktop-links div {
+    position: relative;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-anchor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1rem;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-anchor:hover {
+    color: white;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-anchor p {
+    padding: 0;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-anchor p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 0.3rem;
+    text-underline-offset: 0.5rem;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-links {
+    background-color: white;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+            box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    margin-top: 2.5rem;
+    padding: 3rem 5rem 0 1.8rem;
+    position: absolute;
+    left: -1.5rem;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-links li {
+    list-style: none;
+    padding-bottom: 1.5rem;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-links li a {
+    color: black;
+    text-decoration: none;
+  }
+  #desktop-menu .menu-left #desktop-links .dk-links li a:hover {
+    font-weight: bold;
+  }
+  #desktop-menu .dk-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #desktop-menu .dk-btns {
+    display: block;
+    border-radius: 3rem;
+    border: none;
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    padding: 1.5rem 4rem;
+    cursor: pointer;
+  }
+  #desktop-menu .dk-login {
+    background-color: transparent;
+    color: white;
+  }
+  #desktop-menu .dk-signup {
+    color: #ff525d;
+  }
+  .btn {
+    cursor: pointer;
+  }
+  #card-2 h2 {
+    font-size: 4rem;
+  }
+  #card-2 #mobile-flex-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 16rem;
+  }
+  #card-2 #mobile-flex-1 .iem-desktop {
+    display: block;
+    -ms-flex-preferred-size: 1;
+        flex-basis: 1;
+    max-width: 50%;
+    position: relative;
+    top: -15rem;
+    left: 15%;
+  }
+  #card-2 #mobile-flex-1 .blue-heading,
+  #card-2 #mobile-flex-1 .gray-text {
+    padding: 0;
+    text-align: left;
+  }
+  #card-2 #mobile-flex-1 .blue-heading {
+    font-size: 2.6rem;
+  }
+  #card-3 {
+    padding-top: 0;
+  }
+  #card-3 .inner-card .dk-flex-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    background-size: 80%;
+    background-position: -30rem 80%;
+  }
+  #card-3 .inner-card .dk-flex-2 {
+    width: 50%;
+    padding: 11rem 0 9rem 0;
+  }
+  #card-3 .inner-card .dk-flex-2 h2 {
+    padding: 0;
+    text-align: left;
+  }
+  #card-3 .inner-card .dk-flex-2 p {
+    padding-left: 0;
+    text-align: left;
+  }
+  #card-3 .inner-card img {
+    top: -10rem;
+    left: 0;
+    width: 50%;
+  }
+  #card-4 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding-top: 30rem;
+  }
+  #card-4 .ild {
+    width: 200%;
+    display: block;
+  }
+  #card-4 .ild img {
+    position: relative;
+    top: -25%;
+    left: -23%;
+  }
+  #card-4 div h2,
+  #card-4 div p {
+    text-align: left;
+  }
+  #card-4 div :nth-child(2) {
+    margin-bottom: 7rem;
+  }
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  footer div h4 {
+    text-align: left;
+  }
+  footer div ul li {
+    list-style: none;
+    text-align: left;
+  }
+  footer div ul li a {
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=main.css.map */
